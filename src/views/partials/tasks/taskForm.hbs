@@ -1,0 +1,18 @@
+<div class="header position-sticky">
+  <div class="card card-body p-4 rounded-3 bg-dark text-white">
+  <form action="/tasks/add" method="post">
+  <h3>Añadir una tarea</h3>
+  <div>
+    <label for="title">Escribe un titulo</label>
+    <input type="text" name="title" placeholder="Titulo" id="title" class="form-control rounded-3 bg-dark text-white" />
+  </div>
+  <div>
+    <label for="description">Escribe una descripción:</label>
+    <textarea name="description" id="description" placeholder="Descripción" class="form-control rounded-3 bg-dark text-white" rows="10">
+    </textarea>
+  </div>
+
+  <button class="btn btn-primary btn-sm mt-2">Guardar</button>
+</form>
+</div>
+</div>

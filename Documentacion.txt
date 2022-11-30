@@ -1,0 +1,59 @@
+en el package.json están las dependencias necesarias para la web
+
+BABEL ES UN COMPILADOR DE JS QUE PUEDE CONVERTIR CODIGO NUEVO A CODIGO DE VERSIONES
+ANTERIORES(PRINCIPALMENTE PARA LOS NAVEGADORES)
+
+COMANDOS:
+--D quiere decir que instalamos dependencias de desarrollo
+--G para instalar globalmente una dependencia, que se pueda usar de forma generals
+
+---------------------------------------BABEL-----------------------------------------------------
+@babel/core para poder utilizar babel
+@babel/cli para usar babel desde consola
+@babel/node para usarlo con node
+@babel/preset-env nos permite ejecutar el codigo con sintaxis nueva
+
+creamos un archivo .babelrc para escribir que codigo queremos "traducir"
+por ultimo para iniciar la instancia del servidor tenemos que utilizar como comando
+[[[[[[npx babel-node "archivo que inicie el server"]]]]]]
+npx nos permite ejecutar comandos de paquetes, tambien en scripts en package.js 
+el comando --exec ejecuta un comando especifico añadido
+
+finalmente para que el interprete en este caso node pueda leer todo nuestra app lo traducimos con babel
+nuevamente en nuestro package.json en scripts con buid: babel src -d dist -d refiriendose a crear un nuevo 
+directiorio, este directorio no lo modificamos
+
+---------------------------------------HANDLEBARS---------------------------------
+{{> porcion de codigo exportable }}
+{{{ porcion de codigo comun para las paginas}}}
+
+----------------------------------------MORGAN ---------------------------
+sirve para imprimir en consola informacion sobre los metodos post get delete etc
+
+npm i -D @babel/core @babel/cli @babel/node @babel/preset-env
+
+-------------------------------------Variables de entorno---------------------
+en esto modificamos la ruta accesora de la base de datos para que no haya inyecciones
+o acceso para esto guardamos una variable no en el codigo sino en el pc
+una variable de entorno es un string
+
+
+instalamos dotenv que nos permite leer esas variables de entorno
+
+pasos:
+primero definimos la variable en un archivo, luego usando el modulo dotenv llamamos
+el metodo config y este lo especificamos donde queremos que este esta variable y para inicializarlo
+usamos el archivo donde queremos que se establezCA ESta variables
+
+POR ULTImo para que no se suba al git nuestro .env lo metemos en un gitignore
+
+---------------------------------------------static files-----------------------
+para poder usar las configuraciones personalizadas usamos static files para que el navegador use esos 
+archivos para decorar
+
+---------------------------NCP-------------------------------
+modulo de node que nos permite copiar carpetas sin tener que hacerlo manualmente
+npm i -D ncp "node copy paste"
+lo podemos usar en el script para ejecutarlo, en este especificamos la carpeta que queremos coppiar
+y el destino Asi 
+[[[[[[[[ncp src/random dist/random]]]]]]]]]

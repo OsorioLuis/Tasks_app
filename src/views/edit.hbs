@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body p-6 text-white rounded-3 bg-dark">
+        <h1>Actualiza una tarea</h1>
+        <br>
+        <form action="/task/edit/{{taskbyid._id}}" method="POST">
+          <div class="mb-4">
+            <input
+            type="text"
+            name="title"
+            placeholder="title"
+            value="{{taskbyid.title}}"
+            class="form-control rounded-3 bg-dark text-white"
+            />
+          </div>
+          <div class="mb-4">
+            <textarea
+              name="description"
+              rows="3"
+              placeholder="Añadir descripción"
+              class="form-control rounded-3 bg-dark text-white"
+            >{{taskbyid.description}}</textarea>
+          </div>
+          <button class="btn btn-primary">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
